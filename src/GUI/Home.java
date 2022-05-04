@@ -15,25 +15,25 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author yassine
+ * @author skander
  */
-public class Home extends Application {
+public class Home extends Application{
+  
     
-    @Override
-    public void start(Stage stage) throws Exception {
+     @Override
+     public void start(Stage stage) throws Exception {
+        try {
+            Parent root =FXMLLoader.load(getClass().getResource("Abonne.fxml"));
        
-            Parent root =FXMLLoader.load(getClass().getResource("Publication.fxml"));
-            
             Scene scene = new Scene(root);
-            stage.setTitle("FORUM");
+            stage.setTitle("INSCRIPTION");
             stage.setScene(scene);
             stage.show();
             
-        
-        
-    
-    
-    }
+        } catch (IOException ex) {
+            
+        }
+}
      /**
      * @param args the command line arguments
      */
@@ -44,3 +44,4 @@ public class Home extends Application {
         
     }
 }
+   

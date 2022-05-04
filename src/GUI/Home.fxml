@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.HomeController">
+   <children>
+      <Text layoutX="272.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" />
+      <Button layoutX="516.0" layoutY="335.0" mnemonicParsing="false" onAction="#goToLogin" text="LogOut" />
+      <Label fx:id="nom" layoutX="42.0" layoutY="65.0" text="Nom: " />
+      <Label fx:id="prenom" layoutX="41.0" layoutY="100.0" text="Prenom: " />
+      <Label fx:id="ddn" layoutX="42.0" layoutY="137.0" text="Date de naissance: " />
+      <Label fx:id="num_tel" layoutX="42.0" layoutY="200.0" text="Num tel: " />
+      <Label fx:id="adresse" layoutX="42.0" layoutY="230.0" text="Adresse: " />
+      <Label fx:id="sexe" layoutX="42.0" layoutY="263.0" text="Sexe: " />
+      <ImageView fx:id="pdp" fitHeight="228.0" fitWidth="218.0" layoutX="368.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="509.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToUpdateProfile" text="Modifier" />
+      <Button layoutX="29.0" layoutY="320.0" mnemonicParsing="false" onAction="#goToMyAmis" text="Amis" />
+      <Button layoutX="90.0" layoutY="320.0" mnemonicParsing="false" onAction="#goToRequests" text="Requetes" />
+      <Button layoutX="181.0" layoutY="320.0" mnemonicParsing="false" onAction="#goToFindAmis" text="Trouver amis" />
+   </children>
+</AnchorPane>
