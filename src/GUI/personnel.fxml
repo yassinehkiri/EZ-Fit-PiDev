@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="731.0" prefWidth="1274.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.PersonnelController">
+   <children>
+      <ImageView fitHeight="932.0" fitWidth="1427.0" layoutY="-92.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/278719092_528771078602622_6171262232677015066_n%20(1).jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="55.0" layoutY="650.0" prefHeight="21.0" prefWidth="89.0" text="nom salle" />
+      <Label layoutX="51.0" layoutY="185.0" text="nom" />
+      <Label layoutX="48.0" layoutY="238.0" text="prenom" />
+      <Label layoutX="50.0" layoutY="282.0" prefHeight="21.0" prefWidth="37.0" text="tel" />
+      <TextField fx:id="nomsal" layoutX="185.0" layoutY="180.0" promptText="nom" />
+      <TextField fx:id="prenoms" layoutX="185.0" layoutY="233.0" promptText="prenom" />
+      <TextField fx:id="telsal" layoutX="185.0" layoutY="277.0" promptText="telephone" />
+      <Label layoutX="48.0" layoutY="328.0" text="email" />
+      <Label layoutX="49.0" layoutY="363.0" text="mot de passe" />
+      <TextField fx:id="emailsal" layoutX="185.0" layoutY="323.0" promptText="email" />
+      <TextField fx:id="motdepsal" layoutX="185.0" layoutY="358.0" promptText="mdp" />
+      <Button fx:id="ajout" layoutX="481.0" layoutY="432.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="31.0" prefWidth="108.0" text="ajouter" />
+      <Button fx:id="mod" layoutX="750.0" layoutY="432.0" mnemonicParsing="false" onAction="#modifier" prefHeight="31.0" prefWidth="121.0" text="Modifier" />
+      <TableView fx:id="persotable" layoutX="382.0" layoutY="213.0" onMouseClicked="#onclicked" prefHeight="200.0" prefWidth="856.0">
+         <columns>
+            <TableColumn fx:id="idp" minWidth="0.0" prefWidth="0.0" text="id " />
+            <TableColumn fx:id="tnomp" prefWidth="74.0" text="nom" />
+            <TableColumn fx:id="tprenomp" prefWidth="67.0" text="prenom" />
+            <TableColumn fx:id="ttelp" prefWidth="69.0" text="tel" />
+            <TableColumn fx:id="temailp" prefWidth="48.0" text="email" />
+            <TableColumn fx:id="tmdpp" prefWidth="121.0" text="mot de passe" />
+            <TableColumn fx:id="tsalp" prefWidth="92.0" text="salaire" />
+            <TableColumn fx:id="tpostp" prefWidth="79.0" text="poste" />
+            <TableColumn fx:id="thtp" prefWidth="96.0" text="h-tarvail" />
+            <TableColumn fx:id="thabp" prefWidth="67.0" text="h_absence" />
+            <TableColumn fx:id="tdateembp" prefWidth="76.0" text="date embauche" />
+            <TableColumn fx:id="tnomsc" prefWidth="65.0" text="nom salle" />
+         </columns>
+      </TableView>
+      <Button fx:id="supp" layoutX="1091.0" layoutY="427.0" mnemonicParsing="false" onAction="#supprimerr" prefHeight="31.0" prefWidth="108.0" text="supprimer" />
+      <Text fill="#1e0909" fontSmoothingType="LCD" layoutX="371.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion personnel" textAlignment="CENTER" wrappingWidth="655.587890625">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="66.0" />
+         </font>
+      </Text>
+      <Button fx:id="clearr" layoutX="398.0" layoutY="715.0" mnemonicParsing="false" onAction="#clear" prefHeight="31.0" prefWidth="89.0" text="Clear" />
+      <TextField fx:id="salaireper" layoutX="185.0" layoutY="401.0" promptText="salaire" />
+      <TextField fx:id="postpers" layoutX="185.0" layoutY="442.0" promptText="poste" />
+      <TextField fx:id="htp" layoutX="185.0" layoutY="488.0" promptText="heures de travail" />
+      <TextField fx:id="hap" layoutX="185.0" layoutY="535.0" promptText="heures d'absence" />
+      <ComboBox fx:id="comboxcps" layoutX="185.0" layoutY="645.0" prefHeight="31.0" prefWidth="187.0" />
+      <Label layoutX="53.0" layoutY="406.0" text="salaire" />
+      <Label layoutX="56.0" layoutY="447.0" text="poste" />
+      <Label layoutX="56.0" layoutY="493.0" text="h_travail" />
+      <Label layoutX="53.0" layoutY="535.0" text="h_absence" />
+      <Label layoutX="50.0" layoutY="587.0" text="date d'embauche" />
+      <DatePicker fx:id="dateepp" layoutX="176.0" layoutY="582.0" />
+      <Button fx:id="hh" layoutX="1173.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" />
+      <ImageView fitHeight="43.0" fitWidth="31.0" layoutX="450.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/273005573_5036077613097392_6831833910378070497_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="69.0" fitWidth="31.0" layoutX="367.0" layoutY="715.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/274791838_1154901028610440_4085653373926603886_n%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="51.0" layoutX="719.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/273888997_1163388077740325_3031392608565865759_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="1054.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/249586776_1006672123522883_6323310930610050706_n.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

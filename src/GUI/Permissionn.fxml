@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="736.0" prefWidth="1059.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.PermissionnController">
+   <children>
+      <ImageView fitHeight="880.0" fitWidth="1120.0" layoutX="-8.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/278719092_528771078602622_6171262232677015066_n%20(1).jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="72.0" layoutY="168.0" prefHeight="21.0" prefWidth="89.0" text="type" />
+      <Label layoutX="62.0" layoutY="237.0" text="permission" />
+      <Label layoutX="68.0" layoutY="302.0" text="date debut" />
+      <Label layoutX="74.0" layoutY="363.0" prefHeight="21.0" prefWidth="64.0" text="date fin" />
+      <TextField fx:id="reclamatio" layoutX="185.0" layoutY="232.0" />
+      <Label layoutX="81.0" layoutY="421.0" text="image" />
+      <TextField fx:id="imgg" layoutX="185.0" layoutY="411.0" />
+      <Button fx:id="ajout" layoutX="446.0" layoutY="427.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="31.0" prefWidth="92.0" text="ajouter" />
+      <Button fx:id="mod" layoutX="652.0" layoutY="428.0" mnemonicParsing="false" onAction="#modifier" prefHeight="31.0" prefWidth="113.0" text="Modifier" />
+      <TableView fx:id="permisiontab" layoutX="422.0" layoutY="213.0" onMouseClicked="#onclicked" prefHeight="200.0" prefWidth="572.0">
+         <columns>
+            <TableColumn fx:id="idvs" minWidth="0.0" prefWidth="0.0" text="id " />
+            <TableColumn fx:id="typev" prefWidth="90.0" text="type" />
+            <TableColumn fx:id="reclamationv" prefWidth="101.0" text="reclamation" />
+            <TableColumn fx:id="datedv" prefWidth="81.0" text="date d" />
+            <TableColumn fx:id="datefv" prefWidth="88.0" text="date f" />
+            <TableColumn fx:id="imagee" prefWidth="104.0" text="image" />
+            <TableColumn fx:id="nompersov" prefWidth="104.0" text="nomperso" />
+         </columns>
+      </TableView>
+      <Button fx:id="supp" layoutX="880.0" layoutY="427.0" mnemonicParsing="false" onAction="#supprimerr" prefHeight="31.0" prefWidth="100.0" text="supprimer" />
+      <Text fill="#32250a" fontSmoothingType="LCD" layoutX="279.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion permission" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="58.0" />
+         </font>
+      </Text>
+      <Button fx:id="upload" layoutX="288.0" layoutY="601.0" mnemonicParsing="false" onAction="#uploadimg" prefHeight="31.0" prefWidth="77.0" text="upload" />
+      <Button fx:id="clearr" layoutX="161.0" layoutY="601.0" mnemonicParsing="false" onAction="#clear" prefHeight="31.0" prefWidth="77.0" text="Clear" />
+      <ImageView fx:id="imageview" fitHeight="142.0" fitWidth="187.0" layoutX="446.0" layoutY="498.0" pickOnBounds="true" preserveRatio="true" />
+      <ComboBox fx:id="comboxnp" layoutX="195.0" layoutY="518.0" prefHeight="31.0" prefWidth="187.0" promptText="comboboxnom" />
+      <Label layoutX="71.0" layoutY="523.0" text="nom personnel" />
+      <ComboBox fx:id="combotype" layoutX="185.0" layoutY="163.0" onAction="#select" prefHeight="31.0" prefWidth="187.0" />
+      <DatePicker fx:id="dated" layoutX="179.0" layoutY="297.0" prefHeight="31.0" prefWidth="187.0" />
+      <DatePicker fx:id="datef" layoutX="179.0" layoutY="353.0" prefHeight="31.0" prefWidth="195.0" />
+      <Button fx:id="jj" layoutX="942.0" layoutY="47.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" textFill="#655e10" />
+      <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="842.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/249586776_1006672123522883_6323310930610050706_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="31.0" layoutX="407.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/273005573_5036077613097392_6831833910378070497_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="618.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/273888997_1163388077740325_3031392608565865759_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="257.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/274004864_1580599505660203_3488215426085879374_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="51.0" layoutX="125.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/274791838_1154901028610440_4085653373926603886_n%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
