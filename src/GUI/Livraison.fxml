@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="708.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LivraisonController">
+   <children>
+      <ImageView fitHeight="899.0" fitWidth="1076.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/bobo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="33.0" layoutY="129.0" text="Numéro" textFill="#2f2c2c" />
+      <Label layoutX="8.0" layoutY="200.0" text="Nom Livreur" />
+      <Label layoutX="6.0" layoutY="263.0" prefHeight="21.0" prefWidth="132.0" text="Prénom Livreur">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="20.0" layoutY="318.0" prefHeight="21.0" prefWidth="89.0" text="Téléphone" />
+      <Label layoutX="6.0" layoutY="393.0" prefHeight="21.0" prefWidth="132.0" text="Adresse Livraison" />
+      <Label layoutX="13.0" layoutY="477.0" prefHeight="21.0" prefWidth="108.0" text="Date Livraison" />
+      <Label layoutX="13.0" layoutY="550.0" text="Date Arrivée" />
+      <TextField fx:id="numl" layoutX="130.0" layoutY="135.0" promptText="numero livraison" />
+      <TextField fx:id="noml" layoutX="122.0" layoutY="195.0" promptText="Nom" />
+      <TextField fx:id="prenoml" layoutX="122.0" layoutY="258.0" />
+      <TextField fx:id="tell" layoutX="122.0" layoutY="313.0" />
+      <TextField fx:id="adressel" layoutX="122.0" layoutY="388.0" />
+      <TableView fx:id="tableliv" layoutX="354.0" layoutY="180.0" onMouseClicked="#oncliked" prefHeight="200.0" prefWidth="684.0">
+         <columns>
+            <TableColumn fx:id="iffv" minWidth="0.0" prefWidth="0.0" text="id" />
+            <TableColumn fx:id="numvl" prefWidth="67.0" text="Numéro" />
+            <TableColumn fx:id="nomlv" prefWidth="73.0" text="Nom" />
+            <TableColumn fx:id="prenomlv" prefWidth="81.0" text="Prénom" />
+            <TableColumn fx:id="telfv" prefWidth="96.0" text="Téléphone" />
+            <TableColumn fx:id="adresselv" prefWidth="93.0" text="Adresse" />
+            <TableColumn fx:id="datelv" prefWidth="140.0" text="Date Livraison" />
+            <TableColumn fx:id="datearl" prefWidth="133.0" text="Date Arrivée" />
+         </columns>
+      </TableView>
+      <Button fx:id="ajouterliv" layoutX="409.0" layoutY="413.0" mnemonicParsing="false" onAction="#ajouterl" prefHeight="31.0" prefWidth="147.0" text="Ajouter" />
+      <Button fx:id="modifierliv" layoutX="639.0" layoutY="413.0" mnemonicParsing="false" onAction="#modifierl" prefHeight="31.0" prefWidth="114.0" text="Modifier" />
+      <Button fx:id="supprimerliv" layoutX="846.0" layoutY="413.0" mnemonicParsing="false" onAction="#supprimerrl" prefHeight="31.0" prefWidth="147.0" text="supprimer" />
+      <Button fx:id="Clearl" layoutX="162.0" layoutY="601.0" mnemonicParsing="false" onAction="#clearl" prefHeight="31.0" prefWidth="101.0" text="Clear" />
+      <DatePicker fx:id="datelll" layoutX="121.0" layoutY="472.0" />
+      <DatePicker fx:id="dateallll" layoutX="121.0" layoutY="545.0" />
+      <Button fx:id="rr" layoutX="968.0" layoutY="32.0" mnemonicParsing="false" onAction="#endd" onMouseClicked="#rett" text="Back" textFill="#997c1c" textOverrun="LEADING_ELLIPSIS" />
+      <Text fill="#2c2311" layoutX="284.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion livraison" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="58.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="132.0" fitWidth="323.0" layoutX="164.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="806.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/249586776_1006672123522883_6323310930610050706_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="54.0" layoutX="370.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/273005573_5036077613097392_6831833910378070497_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="51.0" layoutX="121.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/274791838_1154901028610440_4085653373926603886_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="44.0" layoutX="596.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/273888997_1163388077740325_3031392608565865759_n.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="710.0" prefWidth="1174.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EquipementController">
+   <children>
+      <ImageView fitHeight="787.0" fitWidth="1240.0" layoutY="-58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/bobo.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#862929" layoutX="197.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des equipements" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="64.0" />
+         </font>
+      </Text>
+      <Label layoutX="27.0" layoutY="591.0" text="Nom fournisseur" />
+      <Label layoutX="67.0" layoutY="170.0" text="type" />
+      <Label layoutX="55.0" layoutY="276.0" prefHeight="21.0" prefWidth="69.0" text="marque" />
+      <Label layoutX="56.0" layoutY="334.0" text="gamme" />
+      <Label layoutX="59.0" layoutY="400.0" text="quantite" />
+      <Label layoutX="28.0" layoutY="469.0" text="date commande" />
+      <Label layoutX="62.0" layoutY="527.0" text="prix" />
+      <TextField fx:id="type" layoutX="149.0" layoutY="165.0" promptText="type" />
+      <TextField fx:id="marquee" layoutX="156.0" layoutY="271.0" />
+      <TextField fx:id="prixx" layoutX="159.0" layoutY="522.0" />
+      <TableView fx:id="tabequipement" layoutX="381.0" layoutY="171.0" onMouseClicked="#oncliked" prefHeight="200.0" prefWidth="754.0">
+         <columns>
+            <TableColumn fx:id="iffv" minWidth="0.0" prefWidth="0.0" text="id" />
+            <TableColumn fx:id="typev" prefWidth="59.0" text="Type" />
+            <TableColumn fx:id="marquev" prefWidth="89.0" text="Marque" />
+            <TableColumn fx:id="gammev" prefWidth="88.0" text="Gamme" />
+            <TableColumn fx:id="quantitev" prefWidth="97.0" text="Quantité" />
+            <TableColumn fx:id="datecommandev" prefWidth="134.0" text="Date Commande" />
+            <TableColumn fx:id="prixv" prefWidth="70.0" text="Prix" />
+            <TableColumn fx:id="nomeqv" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="nomfournissv" prefWidth="157.0" text="Nom Fournisseur" />
+         </columns>
+      </TableView>
+      <Button fx:id="ajouterf" layoutX="439.0" layoutY="386.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="31.0" prefWidth="111.0" text="Ajouter" />
+      <Button fx:id="modifierf" layoutX="431.0" layoutY="438.0" mnemonicParsing="false" onAction="#modifier" prefHeight="31.0" prefWidth="128.0" text="Modifier" />
+      <Button fx:id="supprimerf" layoutX="960.0" layoutY="385.0" mnemonicParsing="false" onAction="#supprimerr" prefHeight="31.0" prefWidth="150.0" text="supprimer" />
+      <Button fx:id="Clear" layoutX="197.0" layoutY="650.0" mnemonicParsing="false" onAction="#clear" prefHeight="31.0" prefWidth="108.0" text="Clear" />
+      <ComboBox fx:id="comboxnf" layoutX="156.0" layoutY="586.0" prefHeight="31.0" prefWidth="187.0" />
+      <DatePicker fx:id="datecc" layoutX="159.0" layoutY="464.0" prefHeight="31.0" prefWidth="187.0" />
+      <ComboBox fx:id="comboxgamme" layoutX="159.0" layoutY="329.0" onAction="#selectgamme" prefHeight="31.0" prefWidth="187.0" />
+      <Label layoutX="66.0" layoutY="218.0" text="nom" />
+      <TextField fx:id="nomequ" layoutX="149.0" layoutY="218.0" />
+      <TextField fx:id="qu" layoutX="159.0" layoutY="395.0" />
+      <Button fx:id="ret" layoutX="1048.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" textFill="#c94343" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="74.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="69.0" layoutX="393.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/273005573_5036077613097392_6831833910378070497_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="88.0" layoutX="393.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/273888997_1163388077740325_3031392608565865759_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="69.0" layoutX="908.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/249586776_1006672123522883_6323310930610050706_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="54.0" layoutX="144.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/274791838_1154901028610440_4085653373926603886_n.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="textttt" layoutX="400.0" layoutY="478.0" prefHeight="188.0" prefWidth="708.0" />
+      <Button fx:id="print" layoutX="624.0" layoutY="681.0" mnemonicParsing="false" onAction="#printt" prefHeight="31.0" prefWidth="95.0" text="print" />
+      <Button fx:id="recordd" layoutX="769.0" layoutY="681.0" mnemonicParsing="false" onAction="#record" prefHeight="31.0" prefWidth="95.0" text="record" />
+      <Button fx:id="clearpdf" layoutX="913.0" layoutY="681.0" mnemonicParsing="false" onAction="#clearpdff" prefHeight="31.0" prefWidth="95.0" text="clear" />
+      <Label layoutX="613.0" layoutY="400.0" text="prix total:" />
+      <Label fx:id="txttotal" layoutX="693.0" layoutY="400.0" onMouseClicked="#getsomme" text="Label" />
+      <Button fx:id="barecode" layoutX="453.0" layoutY="681.0" mnemonicParsing="false" onMouseClicked="#barecode" text="Code a barre" textFill="#c94343" />
+      <Button layoutX="765.0" layoutY="401.0" mnemonicParsing="false" onKeyPressed="#sendQr" text="qrcode" />
+   </children>
+</AnchorPane>
